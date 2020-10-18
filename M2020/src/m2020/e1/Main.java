@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package m2020.po;
+package m2020.e1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,36 +15,16 @@ import java.io.InputStreamReader;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
+        
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(ir);
         
-        String coluna;
-        
-        coluna = in.readLine();
-        
-        int A = 1;
-        int B = 2;
-        int C = 3;
-        int D = 3;
-        int E = 3;
-        int F = 3;
-        int G = 3;
-        int H = 3;
-        int I = 3;
-        int J = 3;
-        int K = 3;
-        
+        String linha = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
                 
-        int maior = Integer.parseInt(array[0]);
+        String array[] = linha.split(" ");
         
-        for (int i=0; i< qtd; i++){
-            if (maior<Integer.parseInt(array[i])){
-                maior = Integer.parseInt(array[i]);
-            }
-        } 
         
-        System.out.println(maior + 1);
-        
+        qtd = Integer.parseInt(in.readLine());
         
     }
 }
