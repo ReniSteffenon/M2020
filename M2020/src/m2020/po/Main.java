@@ -23,25 +23,12 @@ public class Main {
 
         String coluna;
         boolean permanece = true;
-        List<String> en = new ArrayList<String>();
-        do {
-            coluna = in.readLine();
-            if (coluna.equalsIgnoreCase("EOF")) {
-                permanece = false;
-                en.add(coluna);
-            } else {
-                en.add(coluna);
-            }
-
-        } while (permanece);
-
-        permanece = true;
 
         int y = 0;
 
         do {
             int valorF = 0;
-            coluna = en.get(y);
+            coluna = in.readLine();;
             if (coluna.equalsIgnoreCase("EOF")) {
                 permanece = false;
             } else {
