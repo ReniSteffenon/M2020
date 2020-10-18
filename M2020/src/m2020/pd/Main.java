@@ -52,6 +52,8 @@ public class Main {
             }
         }
         
+       
+        
         for (int i=0; i< array.length; i++){
             System.out.println(array[i][0] + " - " + array[i][1] + " - PAI: " + array[i][2]);
         }
@@ -61,4 +63,71 @@ public class Main {
         }
         
     }
+}
+
+class Nodo{
+
+    protected int id;
+    protected int nivel;
+    protected int pai;
+    protected int filho0;
+    protected int filho1;
+    
+    public Nodo(int id, int nivel, int pai){
+        this.id = id;
+        this.nivel = nivel;
+        this.pai = pai;
+        this.filho0 = 0;
+        this.filho1 = 0;
+    }
+    
+    public boolean isFolha(){
+        if(filho0==0&&filho1==0){
+            return true;
+        }
+        return false;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public int getPai() {
+        return pai;
+    }
+
+    public void setPai(int pai) {
+        this.pai = pai;
+    }
+
+    public int getFilho0() {
+        return filho0;
+    }
+
+    public void setFilho0(int filho0) {
+        this.filho0 = filho0;
+    }
+
+    public int getFilho1() {
+        return filho1;
+    }
+
+    public void setFilho1(int filho1) {
+        this.filho1 = filho1;
+    }
+    
+    
+    
 }
