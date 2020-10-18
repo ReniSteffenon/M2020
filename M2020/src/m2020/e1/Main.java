@@ -19,12 +19,45 @@ public class Main {
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(ir);
         
-        String linha = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
-                
-        String array[] = linha.split(" ");
+        String alfabetoU = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+        String alfabetoL = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
         
+        String arrayU[] = alfabetoU.split(" ");
+        String arrayL[] = alfabetoL.split(" ");
         
-        qtd = Integer.parseInt(in.readLine());
+        String linha = in.readLine();
         
+        String l[] = linha.split("");
+        
+        for (int i=0; i<l.length; i++){
+            for (int j=0; j<arrayL.length; j++){
+                int prox = j + 13;
+                if (prox >= 25){
+                    prox = prox - 26;
+                }
+                if (l[i].equals(arrayL[j])){
+                    l[i]=arrayL[prox];
+                    j=arrayL.length;
+                }
+            }
+            
+            for (int j=0; j<arrayU.length; j++){
+                int prox = j + 13;
+                if (prox >= 25){
+                    prox = prox - 26;
+                }
+                if (l[i].equals(arrayU[j])){
+                    l[i]=arrayU[prox];
+                    j=arrayU.length;
+                }
+            }
+        }
+        
+        linha = "";
+        for(int i=0; i<l.length; i++){
+            linha += l[i];
+        }
+        
+        System.out.println(linha);
     }
 }
